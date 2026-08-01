@@ -1,0 +1,10 @@
+[package]
+name = "tinyexpr_rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["tinyexpr_rs"]
+description = "A small expression parser and evaluator inspired by TinyExpr."
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
