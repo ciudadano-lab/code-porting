@@ -1,0 +1,27 @@
+[package]
+name = "tinyexpr"
+version = "0.1.0"
+edition = "2021"
+license = "Zlib"
+description = "A safe Rust port of TinyExpr, a tiny recursive-descent expression parser and evaluator (originally by Lewis Van Winkle / codeplea)."
+readme = "README.md"
+
+[lib]
+name = "tinyexpr"
+path = "src/lib.rs"
+
+[[example]]
+name = "example"
+path = "examples/example.rs"
+
+[[example]]
+name = "example2"
+path = "examples/example2.rs"
+
+[[example]]
+name = "example3"
+path = "examples/example3.rs"
+
+[[example]]
+name = "repl"
+path = "examples/repl.rs"
