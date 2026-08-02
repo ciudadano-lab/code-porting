@@ -1,0 +1,103 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "cargo test smoke",
+			"type": "shell",
+			"command": "cargo test --test smoke -- --nocapture",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "cargo test parser_tests",
+			"type": "shell",
+			"command": "cargo test --test parser_tests",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "cargo test parser_tests",
+			"type": "shell",
+			"command": "cargo test --test parser_tests",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "cargo test single addition",
+			"type": "shell",
+			"command": "cargo test --test parser_tests test_addition -- --nocapture",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "cargo test all",
+			"type": "shell",
+			"command": "cargo test -- --nocapture",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "cargo test lib parser smoke",
+			"type": "shell",
+			"command": "cargo test --lib; cargo test --test parser_tests; cargo test --test smoke",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "run examples",
+			"type": "shell",
+			"command": "cargo run --example example; cargo run --example example2 \"2+3\"; cargo run --example example3; cargo run --example repl -e \"2+3\"",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "run repl example",
+			"type": "shell",
+			"command": "cargo run --example repl -- -e \"2+3\"",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "rebuild repl clean",
+			"type": "shell",
+			"command": "cargo clean && cargo build --example repl",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "rebuild repl clean",
+			"type": "shell",
+			"command": "cargo clean; cargo build --example repl",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "kill stale repl",
+			"type": "shell",
+			"command": "cmd /c \"taskkill /F /IM repl.exe 2>nul\"",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "delete repl artifact and build",
+			"type": "shell",
+			"command": "cmd.exe /c \"del /f /q C:\\Users\\zatta\\OneDrive\\Documents\\Tinyexpr\\target\\debug\\examples\\repl.exe && cargo build --example repl\"",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "delete repl artifact and build",
+			"type": "shell",
+			"command": "cmd.exe /c \"del /f /q C:\\Users\\zatta\\OneDrive\\Documents\\Tinyexpr\\target\\debug\\examples\\repl.exe\" && cargo build --example repl",
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "stop repl process and rebuild",
+			"type": "shell",
+			"command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"Stop-Process -Name repl -Force -ErrorAction SilentlyContinue; cargo build --example repl\"",
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}
