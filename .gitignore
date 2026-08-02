@@ -1,0 +1,26 @@
+# Build output
+/target/
+
+# Cargo lock file (library project)
+Cargo.lock
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.swp
+*.swo
+**/*.rs.bk
+
+# Local environment and generated artifacts
+.env
+.env.*
+*.tmp
+*.temp
+*.orig
